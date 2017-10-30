@@ -15,16 +15,36 @@
     </script>
     <style>
         .search{
-            height: 55px;
-            border: 1px solid red;
+            position: relative;
+            height: 61px;
+            background-color: #F8F8F8;
+        }
+        .search .searchCollapseIcon{
+            position: absolute;
+            left: 34px;
+            top: 17px;
+            width: 34px;
+            height: 27px;
+            background-image: url(sprite.png);
+            background-position-x: 559px;
+        }
+        .search .searchIcon{
+            position: absolute;
+            right:48px;
+            top:10px;
+            background-image: url(sprite.png);
+            background-position: 151px -49px;
+            width:43px;
+            height: 46px;
+        }
+        .search .searchProfile{
+
         }
         .searchPopup{
             height: 75px;
-            border: 1px solid gray;
         }
         .menu{
             height: 146px;
-            border: 1px solid black;
             background-color: black;
         }
         .intro{
@@ -37,14 +57,25 @@
          }
         .name{
 
-            border: 1px solid orangered;
+            border: 1px solid #C2C2C1;
          }
+        .image-cropper {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .image-cropper img{
+            width: 120%;
+        }
     </style>
 </head>
 <body ng-app="community">
 <div ng-controller="CommunityCtrl" class="container">
     <div class="search">
-        search
+        <div class="searchCollapseIcon"></div>
+        <div class="searchIcon"></div>
     </div>
     <div class="searchPopup">
         search popup
@@ -61,7 +92,9 @@
         <div class="alphabet xs-col-9">A B C D</div>
     </div>
     <div class="names row">
-        <div class="name col-xs-4">
+        <div class="name col-xs-4 image-cropper">
+            <img src="https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg" class="rounded" />
+
             Allison Bridges
         </div>
         <div class="name col-xs-4">
@@ -83,7 +116,9 @@
         </div>
 
     </div>
- asdfsadfa
+ <div class="row">
+     <input class="loadMore" type="button" value="Load More">
+ </div>
 </div>
 
 <div>

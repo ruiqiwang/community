@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Test</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="names.js"></script>
+    <script>
+        var app = angular.module('community', []);
+        app.controller('CommunityCtrl', ["$scope", function($scope) {
+            $scope.names = selOpts;
+        }]);
+    </script>
+    <style>
+        .search{
+            height: 55px;
+            border: 1px solid red;
+        }
+        .searchPopup{
+            height: 75px;
+            border: 1px solid gray;
+        }
+        .menu{
+            height: 146px;
+            border: 1px solid black;
+            background-color: black;
+        }
+        .intro{
+            height: 282px;
+            background-color: #EAEAEA;
+        }
+        .filter input, .filter .alphabet{
+         }
+        .alphabet{
+         }
+        .name{
+
+            border: 1px solid orangered;
+         }
+    </style>
+</head>
+<body ng-app="community">
+<div ng-controller="CommunityCtrl" class="container">
+    <div class="search">
+        search
+    </div>
+    <div class="searchPopup">
+        search popup
+    </div>
+    <div class="menu">
+        menu
+    </div>
+    <div class="intro">
+        intro
+    </div>
+    <div class="filter row">
+        <div class="filterInput xs-col-3">        <input type="text" placeholder="Filter..." />
+        </div>
+        <div class="alphabet xs-col-9">A B C D</div>
+    </div>
+    <div class="names row">
+        <div class="name col-xs-4">
+            Allison Bridges
+        </div>
+        <div class="name col-xs-4">
+        Allison Bridges
+    </div>
+
+        <div class="name col-xs-4">
+            Allison Bridges
+        </div>
+        <div class="name col-xs-4">
+            Allison Bridges
+        </div>
+
+        <div class="name col-xs-4">
+            Allison Bridges
+        </div>
+        <div class="name col-xs-4">
+            Allison Bridges
+        </div>
+
+    </div>
+ asdfsadfa
+</div>
+
+<div>
+    <div class="container">
+        <noscript>
+            <br>
+            <p class="alert alert-danger text-center">This application requires javascript to be turned on.</p>
+        </noscript>
+        <br>
+    </div>
+</div>
+</body>
+</html>

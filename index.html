@@ -14,6 +14,12 @@
         }]);
     </script>
     <style>
+        * {
+            -webkit-border-radius: 0 !important;
+            -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+        }
+
         .search{
             position: relative;
             height: 61px;
@@ -42,11 +48,61 @@
         }
         .searchPopup{
             height: 75px;
+            position: relative;
         }
+        .searchBar{
+            position:absolute;
+            left: 33px;
+            top: 20px;
+            height: 34px;
+            width: 95%
+        }
+        .searchBar .content{
+            position: absolute;
+            top: 0;
+            height:36px;
+            width: 122px;
+        }
+        .searchBar .go{
+            height: 100%;
+            width: 84px;
+            float: right;
+        }
+        .searchBar .searchInput{
+            width:auto;
+            height: 100%
+         }
         .menu{
             height: 146px;
             background-color: black;
+            padding-top: 28px;
         }
+        .menuItems{
+            border: 1px solid blue;
+            margin: auto;
+            width: 670px;
+            height: 96px;
+        }
+        .menuItems div{
+             float: left;
+            width: 56px;
+            height: 57px;
+        }
+        .menu .passport{
+
+         }
+        .menu .workGroupsIcon{
+
+          }
+        .menu .projects{
+
+         }
+        .menu .roleProfiles{
+
+         }
+        .menu .communities{
+
+         }
         .intro{
             height: 282px;
             background-color: #EAEAEA;
@@ -72,19 +128,36 @@
     </style>
 </head>
 <body ng-app="community">
-<div ng-controller="CommunityCtrl" class="container">
+<div ng-controller="CommunityCtrl" class="container-fluid">
     <div class="search">
         <div class="searchCollapseIcon"></div>
         <div class="searchIcon"></div>
     </div>
     <div class="searchPopup">
-        search popup
+<div class="searchBar">
+    <div class="input-group">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content <span class="caret"></span></button>
+        </div><!-- /btn-group -->
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div>
+</div>
     </div>
     <div class="menu">
-        menu
+        <div class="menuItems">
+            <div class="passport">passport</div>
+            <div class="projects">projects</div>
+            <div class="workGroupsIcon">work groups</div>
+            <div class="roleProfiles">role profiles</div>
+            <div  class="communities">communities</div>
+        </div>
+
     </div>
     <div class="intro">
-        intro
+
     </div>
     <div class="filter row">
         <div class="filterInput xs-col-3">        <input type="text" placeholder="Filter..." />

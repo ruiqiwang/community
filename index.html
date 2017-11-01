@@ -202,9 +202,21 @@
          }
          /*https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg*/
         .userProfile {
+            position: relative;
             padding-left: 3px;
             padding-bottom: 39px;
             min-width:200px;
+            z-index: 100;
+        }
+        .userProfile .selectArea{
+            z-index: 50;
+            position: absolute;
+            width: 60px;
+            height: 20px;
+            background-color: #CCCCCC;
+            left:3px;
+            top: 40px;
+            overflow: hidden;
         }
         .words{
             float: left;
@@ -222,7 +234,7 @@
             float:left;
             width:60px;
             height: 60px;
-            border: 1px solid blue;
+            border: 2px solid #CCC;
             background-color: red;
             padding:0;
             margin: 0;
@@ -322,6 +334,7 @@
          <div class="userProfile col-xs-4">
              <div class="userPhoto">
                  <img src="https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg"/>
+                <div class="selectArea"><input type="checkbox" /> </div>
              </div>
              <div class="words">
                  <div class="name">Allison Bridges</div>

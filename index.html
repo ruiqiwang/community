@@ -14,10 +14,10 @@
         }]);
     </script>
     <style>
-        .form-control, .btn {
-            -webkit-border-radius: 0 !important;
-            -moz-border-radius: 0 !important;
-            border-radius: 0 !important;
+        .form-control, .btn, input {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
         }
 
         .search{
@@ -33,6 +33,16 @@
             height: 27px;
             background-image: url(sprite.png);
             background-position-x: 559px;
+        }
+        .search .profile{
+            width:40px;
+            height:40px;
+            border:2px solid #3B91D3;
+            float: right;
+            margin: 12px 5px auto auto;
+            border-radius: 50%;
+            background-image: url(https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg);
+            background-size: 100%;
         }
         .search .searchIcon{
             position: absolute;
@@ -68,10 +78,7 @@
             width: 84px;
             float: right;
         }
-        .searchBar .searchInput{
-            width:auto;
-            height: 100%
-         }
+
         .menu{
             height: 146px;
             background-color: black;
@@ -108,6 +115,18 @@
         .communities .menuItemWord{
             left: -20px;
         }
+        .communities{
+            height: 118px;
+        }
+
+        .arrow{
+            margin: 46px auto;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 15px 15px 15px;
+            border-color: transparent transparent #eaeaea transparent;
+        }
         .menuIcon{
             width: 100%;
             height: 57px;
@@ -128,9 +147,7 @@
         .projects .menuIcon{
             background-position: 579px -50px;
             height: 61px;
-
         }
-
         .workGroups{
             width: 56px;
             margin-right: 107px;
@@ -166,6 +183,7 @@
             background-position: 350px -349px;
             transition: background 0.5s;
             zoom: .712;
+            border-radius: 50%;
         }
         p{
             padding-top:11px;
@@ -184,7 +202,6 @@
           }
         .filterInput, .alphabet{
             margin-top: 27px;
-
             float: left;
          }
          .alphabet{
@@ -196,28 +213,29 @@
          }
          .names{
              clear: both;
-          /*   border: 1px solid red;*/
              margin:0 87px;
              padding:52px 0;
+             padding-bottom: 0;
          }
-         /*https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg*/
-        .userProfile {
+         .userProfile {
             position: relative;
             padding-left: 3px;
             padding-bottom: 39px;
             min-width:200px;
-            z-index: 100;
-        }
+         }
         .userProfile .selectArea{
-            z-index: 50;
-            position: absolute;
             width: 60px;
             height: 20px;
-            background-color: #CCCCCC;
-            left:3px;
-            top: 40px;
-            overflow: hidden;
-        }
+            background-color: #CCC;
+            margin-top:40px;
+            padding-top: 1px;
+            padding-left:22px;
+         }
+        .selectArea input{
+            display: block;
+            padding-top:0px;
+            margin-top: 3px;
+         }
         .words{
             float: left;
             padding-left:10px;
@@ -235,30 +253,23 @@
             width:60px;
             height: 60px;
             border: 2px solid #CCC;
-            background-color: red;
             padding:0;
             margin: 0;
             overflow: hidden;
-           /* background-image: url(https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg);
-            background-size: 100%;*/
+            background-image: url(https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg);
+            background-size: 100%;
             border-radius: 50%;
-
         }
-        .userPhoto img{
-            object-fit: cover;
-            width:100%;
-            height:auto;
-             overflow: hidden;
+        .loadMore{
+            margin: 0 87px;
+            text-align: center;
         }
-
-        .image-cropper {
-
-
+        .loadMoreButton{
+            background-color: #198074;
+            color: #FFF;
+            width: 180px;
+            height: 40px;
         }
-        .image-cropper img{
-            width: 120%;
-        }
-
     </style>
 </head>
 <body ng-app="community">
@@ -266,6 +277,7 @@
     <div class="search">
         <div class="searchCollapseIcon"></div>
         <div class="searchIcon"></div>
+        <div class="profile"></div>
     </div>
     <div class="searchPopup">
 <div class="searchBar">
@@ -301,6 +313,7 @@
             <div  class="menuItem communities">
                 <div class="menuIcon"></div>
                 <div class="menuItemWord">Communities</div>
+                <div class="arrow"></div>
             </div>
         </div>
 
@@ -333,8 +346,9 @@
 
          <div class="userProfile col-xs-4">
              <div class="userPhoto">
-                 <img src="https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg"/>
-                <div class="selectArea"><input type="checkbox" /> </div>
+                 <div class="selectArea">
+        <input type="checkbox">
+      </div>
              </div>
              <div class="words">
                  <div class="name">Allison Bridges</div>
@@ -385,8 +399,8 @@
          </div>
 
     </div>
- <div class="row">
-     <input class="loadMore" type="button" value="Load More">
+ <div class="loadMore">
+     <button type="button" class="btn btn-default loadMoreButton">Load More</button>
  </div>
 </div>
 

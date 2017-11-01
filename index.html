@@ -181,7 +181,6 @@
             height: 120px;
             background-image: url(sprite.png);
             background-position: 350px -349px;
-            transition: background 0.5s;
             zoom: .712;
             border-radius: 50%;
         }
@@ -210,6 +209,38 @@
              font-size: 16px;
              padding-top:6px;
              clear: right;
+         }
+         .emailIcon{
+             position:relative;
+             margin-top: 25px;
+             margin-right: 107px;
+             float: right;
+             width: 44px;
+             height: 42px;
+             background-image: url(sprite.png);
+             background-position-x: 509px;
+             zoom:.727;
+         }
+         .emailPopup{
+             width: 177px;
+             height: 32px;
+             background-color: #1F2532;
+             position: absolute;
+             top: -35px;
+             left: -67px;
+             padding-top: 4px;
+             font-size: 14px;
+             color: white;
+             text-align: center;
+         }
+         .emailPopupArrow{
+             width: 0;
+             height: 0;
+             border-style: solid;
+             border-width: 7px 6.5px 0 6.5px;
+             border-color: #1f2532 transparent transparent transparent;
+             margin:0 auto;
+             margin-top: -3px;
          }
          .names{
              clear: both;
@@ -335,6 +366,10 @@
             <input type="text" placeholder="Filter..." class="form-control"/>
         </div>
         <div class="alphabet ">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+        <div class="emailIcon">
+            <div class="emailPopup">Email selected members</div>
+            <div class="emailPopupArrow"></div>
+        </div>
      <div class="names row">
         <div class="userProfile col-xs-4">
             <div class="userPhoto"></div>

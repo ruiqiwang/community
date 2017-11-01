@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7406125-0ac2-4845-bec8-a6d4748d229a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="316" column="18" lean-forward="true" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
+            <state relative-caret-position="83">
+              <caret line="229" column="21" lean-forward="false" selection-start-line="229" selection-start-column="21" selection-end-line="229" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -37,9 +36,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>menuitem</find>
-      <find>menuitem{</find>
-      <find>menuIcon</find>
       <find>menuicon</find>
       <find>roleprofiles</find>
       <find>margin-right</find>
@@ -66,6 +62,9 @@
       <find>menu</find>
       <find>.commu</find>
       <find>.arrow</find>
+      <find>crown</find>
+      <find>emailIcon</find>
+      <find>emailicon</find>
       <find>arrow</find>
     </findStrings>
   </component>
@@ -86,8 +85,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="681" />
-    <option name="y" value="51" />
+    <option name="x" value="157" />
+    <option name="y" value="30" />
     <option name="width" value="1053" />
     <option name="height" value="716" />
   </component>
@@ -385,7 +384,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="681" y="51" width="1053" height="716" extended-state="0" />
+    <frame x="157" y="30" width="1053" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -447,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="316" column="18" lean-forward="true" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
+        <state relative-caret-position="83">
+          <caret line="229" column="21" lean-forward="false" selection-start-line="229" selection-start-column="21" selection-end-line="229" selection-end-column="21" />
           <folding />
         </state>
       </provider>

@@ -178,14 +178,58 @@
             margin-top:11px;
             float:right;
         }
-        .filter input, .filter .alphabet{
-         }
-        .alphabet{
-         }
-        .name{
+          .filterInput{
+              margin-left:87px;
+              width:246px;
+          }
+        .filterInput, .alphabet{
+            margin-top: 27px;
 
-            border: 1px solid #C2C2C1;
+            float: left;
          }
+         .alphabet{
+             margin-left: 49px;
+             color:#BCBCBC;
+             font-size: 16px;
+             padding-top:6px;
+             clear: right;
+         }
+         .names{
+             clear: both;
+          /*   border: 1px solid red;*/
+             margin-left:87px;
+             padding-top: 52px;
+         }
+         /*https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg*/
+        .userProfile {
+            padding-left: 3px;
+            padding-bottom: 39px;
+            min-width:200px;
+        }
+        .words{
+            float: left;
+            padding-left:10px;
+        }
+        .words .name{
+            color: #77A6CF;
+            padding-top: 5px;
+            font-size: 15px;
+        }
+        .words .email{
+            font-size: 14px;
+        }
+        .userPhoto{
+            float:left;
+            width: 60px;
+            height: 60px;
+            bordr: 1px solid blue;
+            background-color: red;
+            float: left;
+            padding:0;
+            margin: 0;
+            background-image: url(https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg);
+            background-size: 100%;
+        }
         .image-cropper {
             width: 100px;
             height: 100px;
@@ -210,7 +254,7 @@
         <div class="input-group-btn">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content <span class="caret"></span></button>
         </div><!-- /btn-group -->
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" placeholder="Search for...">
         <span class="input-group-btn">
         <button class="btn btn-default" type="button">Go!</button>
       </span>
@@ -255,34 +299,68 @@
         </div>
 
     </div>
-    <div class="filter row">
-        <div class="filterInput xs-col-3">        <input type="text" placeholder="Filter..." />
+         <div class="filterInput">
+            <input type="text" placeholder="Filter..." class="form-control"/>
         </div>
-        <div class="alphabet xs-col-9">A B C D</div>
-    </div>
-    <div class="names row">
-        <div class="name col-xs-4 image-cropper">
-            <img src="https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg" class="rounded" />
-
-            Allison Bridges
-        </div>
-        <div class="name col-xs-4">
-        Allison Bridges
-    </div>
-
-        <div class="name col-xs-4">
-            Allison Bridges
-        </div>
-        <div class="name col-xs-4">
-            Allison Bridges
+        <div class="alphabet ">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+     <div class="names row">
+        <div class="userProfile col-xs-4">
+            <div class="userPhoto"></div>
+            <div class="words">
+                <div class="name">Allison Bridges</div>
+                <div class="email">allison.bridges@ualbany.edu</div>
+            </div>
         </div>
 
-        <div class="name col-xs-4">
-            Allison Bridges
-        </div>
-        <div class="name col-xs-4">
-            Allison Bridges
-        </div>
+         <div class="userProfile col-xs-4">
+             <div class="userPhoto"></div>
+             <div class="words">
+                 <div class="name">Allison Bridges</div>
+                 <div class="email">allison.bridges@ualbany.edu</div>
+             </div>
+         </div>
+
+
+         <div class="userProfile col-xs-4">
+             <div class="userPhoto"></div>
+             <div class="words">
+                 <div class="name">Allison Bridges</div>
+                 <div class="email">allison.bridges@ualbany.edu</div>
+             </div>
+         </div>
+
+
+
+         <div class="userProfile col-xs-4">
+             <div class="userPhoto"></div>
+             <div class="words">
+                 <div class="name">Allison Bridges</div>
+                 <div class="email">allison.bridges@ualbany.edu</div>
+             </div>
+         </div>
+
+
+
+
+
+         <div class="userProfile col-xs-4">
+             <div class="userPhoto"></div>
+             <div class="words">
+                 <div class="name">Allison Bridges</div>
+                 <div class="email">allison.bridges@ualbany.edu</div>
+             </div>
+         </div>
+
+
+
+
+         <div class="userProfile col-xs-4">
+             <div class="userPhoto"></div>
+             <div class="words">
+                 <div class="name">Allison Bridges</div>
+                 <div class="email">allison.bridges@ualbany.edu</div>
+             </div>
+         </div>
 
     </div>
  <div class="row">

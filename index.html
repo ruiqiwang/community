@@ -14,7 +14,7 @@
         }]);
     </script>
     <style>
-        * {
+        .form-control, .btn {
             -webkit-border-radius: 0 !important;
             -moz-border-radius: 0 !important;
             border-radius: 0 !important;
@@ -167,7 +167,7 @@
             transition: background 0.5s;
             zoom: .712;
         }
-          p{
+        p{
             padding-top:11px;
         }
           .toolIcon{
@@ -178,7 +178,7 @@
             margin-top:11px;
             float:right;
         }
-          .filterInput{
+        .filterInput{
               margin-left:87px;
               width:246px;
           }
@@ -197,8 +197,8 @@
          .names{
              clear: both;
           /*   border: 1px solid red;*/
-             margin-left:87px;
-             padding-top: 52px;
+             margin:0 87px;
+             padding:52px 0;
          }
          /*https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg*/
         .userProfile {
@@ -220,26 +220,33 @@
         }
         .userPhoto{
             float:left;
-            width: 60px;
+            width:60px;
             height: 60px;
-            bordr: 1px solid blue;
+            border: 1px solid blue;
             background-color: red;
-            float: left;
             padding:0;
             margin: 0;
-            background-image: url(https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg);
-            background-size: 100%;
-        }
-        .image-cropper {
-            width: 100px;
-            height: 100px;
-            position: relative;
             overflow: hidden;
+           /* background-image: url(https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg);
+            background-size: 100%;*/
             border-radius: 50%;
+
+        }
+        .userPhoto img{
+            object-fit: cover;
+            width:100%;
+            height:auto;
+             overflow: hidden;
+        }
+
+        .image-cropper {
+
+
         }
         .image-cropper img{
             width: 120%;
         }
+
     </style>
 </head>
 <body ng-app="community">
@@ -313,7 +320,9 @@
         </div>
 
          <div class="userProfile col-xs-4">
-             <div class="userPhoto"></div>
+             <div class="userPhoto">
+                 <img src="https://1.bp.blogspot.com/-9nLGuzwGeuo/V07xBpjog1I/AAAAAAAAFaI/vcVqrb51QsgfERcoGn3ve3Nq0Fpy2lJQwCLcB/s1600/Harry%2BPotter.jpg"/>
+             </div>
              <div class="words">
                  <div class="name">Allison Bridges</div>
                  <div class="email">allison.bridges@ualbany.edu</div>

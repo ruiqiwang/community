@@ -188,11 +188,40 @@ p{
     float: left;
 }
 .alphabet{
-    margin-left: 49px;
-    color:#BCBCBC;
+    margin-left: 45px;
     font-size: 16px;
     padding-top:6px;
     clear: right;
+}
+.letter{
+    padding:4px;
+    color:#BCBCBC;
+}
+.letter.selected{
+    color:white;
+    text-decoration: none;
+}
+.letterItem {
+    display: inline-block;
+    width:22px;
+    height:21px;
+    position: relative;
+}
+.letterItem .shadow{
+
+    width: 22px;
+    height: 21px;
+    background-color: #3D83AB;
+    border-radius: 50%;
+    position: absolute;
+    top:0px;
+    left:-2px;
+    z-index:-1
+
+}
+
+.letter:hover{
+    text-decoration: none;
 }
 .emailIcon{
     position:relative;
@@ -232,6 +261,7 @@ p{
     padding:52px 0;
     padding-bottom: 0;
 }
+
 .userProfile {
     position: relative;
     padding-left: 3px;

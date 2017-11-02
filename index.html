@@ -10,8 +10,23 @@
     <script src="names.js"></script>
     <script>
         var app = angular.module('community', []);
-        app.controller('CommunityCtrl', ["$scope", function($scope) {
-            $scope.names = selOpts;
+        app.service("NamesService", [function(){
+           return {
+               getNames: function(){
+                   return selOpts;
+               }
+           }
+        }]);
+
+        app.controller('CommunityCtrl', ["$scope", "NamesService", function($scope, NamesService) {
+            $scope.names = NamesService.getNames().slice(0, 18);
+            $scope.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+            'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+            $scope.changeCurrentFilterLetter = function(letter){
+                $scope.search = letter;
+            };
+
         }]);
     </script>
 
@@ -76,75 +91,33 @@
 
     </div>
          <div class="filterInput">
-            <input type="text" placeholder="Filter..." class="form-control"/>
+            <input type="text" placeholder="Filter..." class="form-control" ng-model="search"/>
         </div>
-        <div class="alphabet ">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+        <div class="alphabet">
+            <div class="letterItem" ng-repeat="letter in alphabet">
+            <a href="" class="letter"
+            ng-click="changeCurrentFilterLetter(letter)" ng-class="{selected: letter == search}">
+                {{letter}}</a><div class="shadow" ng-show="search==letter"></div>
+            </div>
+        </div>
         <div class="emailIcon">
             <div class="emailPopup">Email selected members</div>
             <div class="emailPopupArrow"></div>
         </div>
      <div class="names row">
-        <div class="userProfile col-xs-4">
-            <div class="userPhoto"></div>
-            <div class="words">
-                <div class="name">Allison Bridges</div>
-                <div class="email">allison.bridges@ualbany.edu</div>
-            </div>
-        </div>
 
-         <div class="userProfile col-xs-4">
+         <div class="userProfile col-xs-4" ng-repeat="name in names | filter:search">
              <div class="userPhoto">
                  <div class="selectArea">
-        <input type="checkbox">
-      </div>
+             <input type="checkbox">
+             </div>
              </div>
              <div class="words">
-                 <div class="name">Allison Bridges</div>
+                 <div class="name" ng-cloak>{{name.nm}}</div>
                  <div class="email">allison.bridges@ualbany.edu</div>
              </div>
          </div>
 
-
-         <div class="userProfile col-xs-4">
-             <div class="userPhoto"></div>
-             <div class="words">
-                 <div class="name">Allison Bridges</div>
-                 <div class="email">allison.bridges@ualbany.edu</div>
-             </div>
-         </div>
-
-
-
-         <div class="userProfile col-xs-4">
-             <div class="userPhoto"></div>
-             <div class="words">
-                 <div class="name">Allison Bridges</div>
-                 <div class="email">allison.bridges@ualbany.edu</div>
-             </div>
-         </div>
-
-
-
-
-
-         <div class="userProfile col-xs-4">
-             <div class="userPhoto"></div>
-             <div class="words">
-                 <div class="name">Allison Bridges</div>
-                 <div class="email">allison.bridges@ualbany.edu</div>
-             </div>
-         </div>
-
-
-
-
-         <div class="userProfile col-xs-4">
-             <div class="userPhoto"></div>
-             <div class="words">
-                 <div class="name">Allison Bridges</div>
-                 <div class="email">allison.bridges@ualbany.edu</div>
-             </div>
-         </div>
 
     </div>
  <div class="loadMore">
